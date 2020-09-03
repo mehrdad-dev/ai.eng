@@ -1,0 +1,31 @@
+---
+title: جستجو
+sitemap: false
+---
+
+
+<p dir="rtl" align="right" >  نتایج جستجو <span id="search-query-container" style="display: none;">برای "<strong id="search-query"></strong>"  <span id="search-process">  در حال جستجو</span>  <br> <span id="search-counts"> </span> </span></p>
+<ul dir="rtl" align="right" id="search-results"></ul>
+
+<script>
+	window.data = {
+		{% for post in site.posts %}
+			{% if post.title %}
+				{% unless post.excluded_in_search %}
+					{% if added %},{% endif %}
+					{% assign added = false %}
+					"{{ post.url | slugify }}": {
+						"id": "{{ post.url | slugify }}",
+						"title": "{{ post.title | xml_escape }}",
+						"categories": "{{ post.categories | join: ", " | xml_escape }}",
+						"url": " {{ post.url | xml_escape }}",
+						"content": {{ post.content | strip_html | replace_regex: "[\s/\n]+"," " | strip | jsonify }}
+					}
+					{% assign added = true %}
+				{% endunless %}
+			{% endif %}
+		{% endfor %}
+	};
+</script>
+<script src="{{ site.baseurl }}/js/lunr.min.js"></script>
+<script src="{{ site.baseurl }}/js/search.js"></script>
