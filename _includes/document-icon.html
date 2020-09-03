@@ -1,0 +1,12 @@
+{% case include.icon %}
+<!-- video -->
+{% when "Video" %}
+{% include video-icon.html %}
+<!-- Document -->
+{% when "Document" %}
+{% include Document-icon.html %}
+<!-- Course -->
+{% when "Course" %}
+{% include course-icon.html %}
+
+{% endcase %}

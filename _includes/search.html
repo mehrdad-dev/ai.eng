@@ -1,0 +1,5 @@
+<form action="{{ site.baseurl }}/search/" method="get" dir="rtl" align="right" >
+	{% include search-icon.html %}
+	<input type="search" name="q" {% if include.add_id %}id="search-input"{% endif %} placeholder="به دنبال چه می گردید؟" autofocus>
+	<input type="submit" value="Search" style="display: none;">
+</form>
