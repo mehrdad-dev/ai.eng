@@ -1,0 +1,6 @@
+- name: صفحه اصلی
+  link: /
+- name: ویدئو ها
+  link: /videos/
+- name: سوالات متداول
+  link: /faq/
