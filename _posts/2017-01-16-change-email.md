@@ -2,7 +2,7 @@
 date: 2017-01-16
 title: هفته اول
 categories:
-  - ML Andrew Ng
+  - ml-andrew-ng
 description: "استنفورد Andrew Ng هفته اول دوره یادگیری ماشین "
 type: Course
 ---
