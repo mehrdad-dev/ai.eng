@@ -63,7 +63,7 @@ defaults:
     scope:
       type: "sets"
     values:
-      _hide_content: true
+      _hide_content: false
   -
     scope:
       path: "index.html"
