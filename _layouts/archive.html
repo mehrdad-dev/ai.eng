@@ -5,4 +5,7 @@ layout: default
 <h2 dir="rtl" align="right" style="text-transform:capitalize;"> {{ page.title | replace: "-", " " }} <span
         class="count">({{ posts | size }})</span> </h2>
 
+<!-- <h2 dir="rtl" align="right" >{{ page.title | replace: "-", " " }}<span class="count">({{ posts | size }})</span></h2> -->
+
 {% include listings.html listings=posts %}
+
